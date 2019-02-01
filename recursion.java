@@ -1,5 +1,11 @@
 public class recursion{
 
+  public static void main(String[]args) {
+    for (int i = 0;i < 10;i += 1) {
+      System.out.println(i + ":  " + fib(i));
+    }
+  }
+
   public static double sqrt(double n) {
     return findSqrt(n,1);
   }
@@ -19,7 +25,7 @@ public class recursion{
   }
 
   public static int fib(int n,int prev, int prev2) {
-    if (n == 0) {
+    if (n <= 1) {
       return prev + prev2;
     }
     return fib(n - 1,prev + prev2,prev);
