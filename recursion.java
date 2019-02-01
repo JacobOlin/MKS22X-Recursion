@@ -15,10 +15,13 @@ public class recursion{
   }
 
   public static int fib(int n){
-    return 0;
+    return fib(n,1,0);
   }
 
   public static int fib(int n,int prev, int prev2) {
-    return 0;
+    if (n == 0) {
+      return prev + prev2;
+    }
+    return fib(n - 1,prev + prev2,prev);
   }
 }
