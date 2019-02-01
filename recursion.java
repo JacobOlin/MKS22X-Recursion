@@ -13,4 +13,12 @@ public class recursion{
     }
     return findSqrt(n,(n/guess + guess) / 2);
   }
+
+  public static int fib(int n){
+    return 0;
+  }
+
+  public static int fib(int n,int prev, int prev2) {
+    return 0;
+  }
 }
