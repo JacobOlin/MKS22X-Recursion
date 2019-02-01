@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class recursion{
 
   public static void main(String[]args) {
@@ -29,5 +30,10 @@ public class recursion{
       return prev + prev2;
     }
     return fib(n - 1,prev + prev2,prev);
+  }
+
+  public static ArrayList<Integer> makeAllSums() {
+    ArrayList<Integer> a = new ArrayList<Integer>();
+    return a;
   }
 }
