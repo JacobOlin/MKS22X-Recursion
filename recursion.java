@@ -2,9 +2,9 @@ import java.util.ArrayList;
 public class recursion{
 
   public static void main(String[]args) {
-    for (int i = 0;i < 10;i += 1) {
+    /*for (int i = 0;i < 10;i += 1) {
       System.out.println(i + ":  " + fib(i));
-    }
+    }*/
   }
 
   public static double sqrt(double n) {
@@ -22,11 +22,14 @@ public class recursion{
   }
 
   public static int fib(int n){
+    if (n == 0) {
+      return 0;
+    }
     return fib(n,1,0);
   }
 
   public static int fib(int n,int prev, int prev2) {
-    if (n <= 1) {
+    if (n <= 2) {
       return prev + prev2;
     }
     return fib(n - 1,prev + prev2,prev);
