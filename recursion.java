@@ -35,8 +35,12 @@ public class recursion{
     return fib(n - 1,prev + prev2,prev);
   }
 
-  public static ArrayList<Integer> makeAllSums() {
+  public static ArrayList<Integer> makeAllSums(int n) {
     ArrayList<Integer> a = new ArrayList<Integer>();
     return a;
+  }
+
+  public static void mAS(ArrayList<Integer> a,int n, int target) {
+    
   }
 }
