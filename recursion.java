@@ -37,10 +37,17 @@ public class recursion{
 
   public static ArrayList<Integer> makeAllSums(int n) {
     ArrayList<Integer> a = new ArrayList<Integer>();
-    return a;
+    Integer z = new Integer(n);
+    Integer target = new Integer(0);
+    mAS(a,z,target);
+    return a;    
   }
 
-  public static void mAS(ArrayList<Integer> a,int n, int target) {
-    
+  public static void mAS(ArrayList<Integer> a,Integer n, Integer target) {
+    if (n == 0) {
+      a.add(target);
+    }
+    mAS(a,n-1,target + n);
+    mAS(a,n-1,target);
   }
 }
