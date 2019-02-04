@@ -5,6 +5,10 @@ public class recursion{
     /*for (int i = 0;i < 10;i += 1) {
       System.out.println(i + ":  " + fib(i));
     }*/
+    /*System.out.println(makeAllSums(0));
+    System.out.println(makeAllSums(1));
+    System.out.println(makeAllSums(2));
+    System.out.println(makeAllSums(3));*/
   }
 
   public static double sqrt(double n) {
@@ -37,17 +41,17 @@ public class recursion{
 
   public static ArrayList<Integer> makeAllSums(int n) {
     ArrayList<Integer> a = new ArrayList<Integer>();
-    Integer z = new Integer(n);
-    Integer target = new Integer(0);
-    mAS(a,z,target);
-    return a;    
+    mAS(a,n,0);
+    return a;
   }
 
-  public static void mAS(ArrayList<Integer> a,Integer n, Integer target) {
+  public static boolean mAS(ArrayList<Integer> a,int n, int target) {
     if (n == 0) {
       a.add(target);
+      return true;
     }
     mAS(a,n-1,target + n);
     mAS(a,n-1,target);
+    return false;
   }
 }
