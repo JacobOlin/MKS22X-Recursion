@@ -11,18 +11,18 @@ public class recursion{
     System.out.println(makeAllSums(3));*/
   }
 
-  public static double sqrt(double n) {
-    return findSqrt(n,1);
+  public static double sqrt(double n,double error) {
+    return findSqrt(n,1,error);
   }
 
-  private static double findSqrt(double n,double guess){
+  private static double findSqrt(double n,double guess,double error){
     if (n == 0) {
       return n;
     }
-    if (Math.abs((guess * guess - n) / n) <= 0.000000001) {
+    if (Math.abs((guess * guess - n) / n) <= error) {
       return guess;
     }
-    return findSqrt(n,(n/guess + guess) / 2);
+    return findSqrt(n,(n/guess + guess) / 2,error);
   }
 
   public static int fib(int n){
